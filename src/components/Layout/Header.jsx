@@ -32,13 +32,13 @@ const Header = () => {
       }`}
     >
       <nav className="section-container">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-28 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img
               src="/lovable-uploads/0b2a15ea-c81d-4b9d-bc16-c6f60e6aa20e.png"
               alt="N@tcom Services Ltd"
-              className="h-12 w-auto object-contain"
+              className="h-14 md:h-12 w-auto object-contain"
             />
           </Link>
 
@@ -72,15 +72,21 @@ const Header = () => {
             </Button>
           </div>
 
-          {/* Mobile Menu Toggle */}
-          <div className="lg:hidden">
+          {/* Mobile Actions */}
+          <div className="flex items-center space-x-3 lg:hidden">
+            {/* Login / Sign Up (Mobile Always Visible) */}
+            <Button className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 px-4 py-2 rounded-lg font-semibold shadow-md text-sm">
+              Login
+            </Button>
+
+            {/* Mobile Menu Toggle */}
             <Button
               variant="ghost"
               size="sm"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-white p-2"
             >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMenuOpen ? <X className="h-8 w-6" /> : <Menu className="h-8 w-6" />}
             </Button>
           </div>
         </div>
@@ -97,7 +103,7 @@ const Header = () => {
                 key={item.name}
                 to={item.href}
                 onClick={() => setIsMenuOpen(false)}
-                className="block text-white hover:text-yellow-300 transition-colors duration-300 font-medium"
+                className="block text-lg text-white hover:text-yellow-300 transition-colors duration-300 font-medium"
               >
                 {item.name}
               </Link>
@@ -112,7 +118,7 @@ const Header = () => {
               <button className="hover:text-yellow-300">FR</button>
             </div>
 
-            {/* Login / Sign Up */}
+            {/* Login / Sign Up inside menu (optional duplicate) */}
             <Button className="w-full bg-yellow-400 hover:bg-yellow-500 text-blue-900 rounded-xl font-semibold shadow-md">
               Login / Sign Up
             </Button>
