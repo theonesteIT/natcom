@@ -19,7 +19,6 @@ const Index = () => {
         <CoursesApp />
         <ServicesOverview />
         <FeaturedCourses />
-        <PopularCourses /> {/* This is where our courses grid lives */}
         <Testimonials />
         <Partners />
         <ContactForm />
