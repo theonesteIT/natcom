@@ -1,14 +1,14 @@
-
-import React from 'react';
-import Header from '@/components/Layout/Header.jsx';
-import Footer from '@/components/Layout/Footer.jsx';
-import HeroSection from '@/components/Hero/HeroSection.jsx';
-import ServicesOverview from '@/components/Services/ServicesOverview.jsx';
-import FeaturedCourses from '@/components/Courses/FeaturedCourses.jsx';
-import ContactForm from '@/components/Contact/ContactForm.jsx';
-import PopularCourses from '@/components/Courses/PopularCourses.jsx';
-import Testimonials from '@/components/Testimonials/Testimonials.jsx';
-import Partners from '@/components/Partners/Partners.jsx';
+import React from "react";
+import Header from "@/components/Layout/Header.jsx";
+import Footer from "@/components/Layout/Footer.jsx";
+import HeroSection from "@/components/Hero/HeroSection.jsx";
+import ServicesOverview from "@/components/Services/ServicesOverview.jsx";
+import FeaturedCourses from "@/components/Courses/FeaturedCourses.jsx";
+import ContactForm from "@/components/Contact/ContactForm.jsx";
+import PopularCourses from "@/components/Courses/PopularCourses.jsx";
+import Testimonials from "@/components/Testimonials/Testimonials.jsx";
+import Partners from "@/components/Partners/Partners.jsx";
+import CoursesApp from "@/components/Courses/CoursesApp.jsx";
 
 const Index = () => {
   return (
@@ -16,9 +16,10 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
-        <PopularCourses />
+        <CoursesApp />
         <ServicesOverview />
         <FeaturedCourses />
+        <PopularCourses /> {/* This is where our courses grid lives */}
         <Testimonials />
         <Partners />
         <ContactForm />

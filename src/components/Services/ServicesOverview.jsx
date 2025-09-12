@@ -10,6 +10,8 @@ const ServicesOverview = () => {
     { icon: Monitor, title: 'Digital Literacy', description: 'Basic computer and internet skills training for non-IT individuals and beginners.', features: ['Easy-to-follow modules', 'Practical exercises', 'Certification included'], color: 'text-purple-600', bgGradient: 'from-purple-50 to-purple-100', iconBg: 'bg-gradient-to-br from-purple-500 to-purple-600' },
     { icon: Building, title: 'Industrial Attachments', description: 'Real-world experience through partnerships with local businesses and organizations.', features: ['Real projects', 'Industry mentoring', 'Networking opportunities'], color: 'text-orange-600', bgGradient: 'from-orange-50 to-orange-100', iconBg: 'bg-gradient-to-br from-orange-500 to-orange-600' },
     { icon: Briefcase, title: 'IT Consultancy Services', description: 'Custom IT solutions and professional advice for businesses and organizations.', features: ['IT strategy', 'System implementation', 'Ongoing support'], color: 'text-green-600', bgGradient: 'from-green-50 to-green-100', iconBg: 'bg-gradient-to-br from-green-500 to-green-600' },
+    // New Service Added
+    { icon: Sparkles, title: 'Soft Skills & Career Guidance', description: 'Develop essential soft skills and receive career mentorship to succeed in IT and professional environments.', features: ['Communication skills', 'Interview preparation', 'Resume & LinkedIn guidance'], color: 'text-pink-600', bgGradient: 'from-pink-50 to-pink-100', iconBg: 'bg-gradient-to-br from-pink-500 to-pink-600' },
   ];
 
   return (
@@ -76,5 +78,3 @@ const ServicesOverview = () => {
 };
 
 export default ServicesOverview;
-
-
