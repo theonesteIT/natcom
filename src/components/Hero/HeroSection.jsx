@@ -10,6 +10,10 @@ const HeroSection = () => {
     { icon: Globe, number: "10+", label: "Industry Partners" },
   ];
 
+  // Google Form link
+  const formLink =
+    "https://docs.google.com/forms/d/e/1FAIpQLSc9L4kyxeAD7nZc-wgrN0MDOkE6Txo5Pm5xbsyHW1gUMZ8lcg/viewform";
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Video */}
@@ -22,7 +26,6 @@ const HeroSection = () => {
           playsInline
           className="w-full h-full object-cover"
         />
-        {/* Dark overlay for readability */}
         <div className="absolute inset-0 bg-black/60"></div>
       </div>
 
@@ -45,16 +48,33 @@ const HeroSection = () => {
 
         {/* Subtitle */}
         <p className="text-lg md:text-2xl text-white/90 max-w-4xl mx-auto mb-12 leading-relaxed">
-          Internships, Digital Skills & Professional Certifications —
-          bridging education with real-world industry demands.
+          Internships, Digital Skills & Professional Certifications — bridging education with
+          real-world industry demands.
+        </p>
+
+        {/* Register Now Button */}
+        <Button
+          onClick={() => window.open(formLink, "_blank")}
+          className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white rounded-full px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+        >
+          Register Now
+          <ArrowRight className="ml-2 h-5 w-5" />
+        </Button>
+
+        <p className="text-lg md:text-2xl text-white/90 max-w-4xl mx-auto mt-8 leading-relaxed">
+          October–December Program
         </p>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
-          <Button className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white rounded-full px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 my-12">
+          <Button
+            onClick={() => window.open(formLink, "_blank")}
+            className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white rounded-full px-8 py-4 text-lg font-semibold shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+          >
             Get Started
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
+
           <Button
             variant="outline"
             className="bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20 rounded-full px-8 py-4 text-lg font-semibold"
