@@ -16,10 +16,11 @@ const Header = () => {
   const navigation = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
+    { name: "News & Updates", href: "/new" }, 
     { name: "Programs", href: "/programs" },
-    { name: "Online Learning", href: "/online-learning" },
     { name: "Internships", href: "/internships" },
     { name: "Professional Courses", href: "/courses" },
+    { name: "Online Learning", href: "/online-learning" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -58,26 +59,30 @@ const Header = () => {
           {/* Actions */}
           <div className="hidden md:flex items-center space-x-4">
             {/* Language Switch */}
-            <div className="flex items-center space-x-2 text-white text-sm">
+            {/* <div className="flex items-center space-x-2 text-white text-sm">
               <button className="hover:text-yellow-300">EN</button>
               <span>|</span>
               <button className="hover:text-yellow-300">RW</button>
               <span>|</span>
               <button className="hover:text-yellow-300">FR</button>
-            </div>
+            </div> */}
 
             {/* Login / Sign Up */}
-            <Button className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 px-6 py-2.5 rounded-xl font-semibold shadow-md">
-              Login / Sign Up
-            </Button>
+            <Link to="/login">
+              <Button className="px-6 py-2.5 rounded-xl font-semibold shadow-md btn-brand">
+                Login / Sign Up
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Actions */}
           <div className="flex items-center space-x-3 lg:hidden">
             {/* Login / Sign Up (Mobile Always Visible) */}
-            <Button className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 px-4 py-2 rounded-lg font-semibold shadow-md text-sm">
-              Login
-            </Button>
+            <Link to="/login">
+              <Button className="px-4 py-2 rounded-lg font-semibold shadow-md text-sm btn-brand">
+                Login
+              </Button>
+            </Link>
 
             {/* Mobile Menu Toggle */}
             <Button
@@ -119,9 +124,11 @@ const Header = () => {
             </div>
 
             {/* Login / Sign Up inside menu (optional duplicate) */}
-            <Button className="w-full bg-yellow-400 hover:bg-yellow-500 text-blue-900 rounded-xl font-semibold shadow-md">
-              Login / Sign Up
-            </Button>
+            <Link to="/login" className="block">
+              <Button className="w-full rounded-xl font-semibold shadow-md btn-brand">
+                Login / Sign Up
+              </Button>
+            </Link>
           </div>
         </div>
       </nav>

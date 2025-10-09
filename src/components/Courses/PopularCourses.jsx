@@ -33,7 +33,7 @@ const PopularCourses = () => {
               key={course.id}
               className="group overflow-hidden hover:shadow-xl transition-all duration-300"
             >
-              <div className="h-2 bg-darkblue from-brand-500 to-tech-500 to bg-gradient-to-r from-darkblue to-blue-600" />
+              <div className="h-2 bg-darkblue from-brand-500 to-tech-500 from-darkblue to-blue-600" />
               <CardHeader className="pb-3">
                 <div className="flex items-center justify-between mb-2">
                   <Badge variant="secondary" className="bg-gray-100 text-gray-800">

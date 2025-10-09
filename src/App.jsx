@@ -6,8 +6,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import CourseDetailsPage from "./components/Courses/CourseDetailsPage";
 import Index from "./pages/Index";
-import Programs from "./pages/Programs";
+import Programs from "./components/Programs/Programs";
+import AboutUs from "./components/AboutUs/AboutUs";
+import NewsUpdates from "./pages//NewsUpdates"; 
+// import ModernInternshipPlatform from "./pages//Internership";
 import NotFound from "./pages/NotFound";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 
 const queryClient = new QueryClient();
 
@@ -19,9 +24,13 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/course/:id" element={<CourseDetailsPage />} />
+          <Route path="/about" element={<AboutUs />} />
           <Route path="/programs" element={<Programs />} />
-          {/* Catch-all route */}
+          <Route path="/new" element={<NewsUpdates />} />   
+          <Route path="/internships" element={<ModernInternshipPlatform />} /> 
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/course/:id" element={<CourseDetailsPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
