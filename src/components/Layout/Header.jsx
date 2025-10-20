@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -8,6 +8,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isProgramsOpen, setIsProgramsOpen] = useState(false);
   const programsRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -53,6 +54,11 @@ const Header = () => {
     },
   ];
 
+  const handleProgramsClick = (e) => {
+    e.preventDefault(); // prevent default Link navigation
+    navigate("/programs"); // go to Programs page
+  };
+
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-500 ${
@@ -82,6 +88,7 @@ const Header = () => {
                   onMouseLeave={() => setIsProgramsOpen(false)}
                 >
                   <button
+                    onClick={handleProgramsClick}
                     className="flex items-center text-white hover:text-yellow-300 font-medium transition-colors duration-300"
                   >
                     {item.name}
@@ -92,20 +99,18 @@ const Header = () => {
                     />
                   </button>
 
-                  {/* FULL-WIDTH Dropdown with Slide Animation */}
+                  {/* Full-width Dropdown with Animation */}
                   <div
-                    className={`fixed left-0 top-0 w-full bg-white text-gray-800 border-t border-yellow-300 shadow-2xl z-40 transition-all duration-500 ease-in-out ${
+                    className={`fixed left-0 w-full bg-white text-gray-800 border-t border-yellow-300 shadow-2xl z-40 transition-all duration-500 ease-in-out ${
                       isProgramsOpen
                         ? "max-h-[600px] opacity-100 translate-y-0"
                         : "max-h-0 opacity-0 -translate-y-4 pointer-events-none"
                     }`}
-                    style={{ top: "80px" }} // adjust based on header height
+                    style={{ top: "80px" }}
                     onMouseEnter={() => setIsProgramsOpen(true)}
                     onMouseLeave={() => setIsProgramsOpen(false)}
                   >
-                    <div
-                      className="max-w-7xl mx-auto p-8 grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
-                    >
+                    <div className="max-w-7xl mx-auto p-8 grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                       {programLinks.map((subItem) => (
                         <Link
                           key={subItem.name}
