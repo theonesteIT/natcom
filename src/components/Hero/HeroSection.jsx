@@ -34,15 +34,15 @@ const HeroSection = () => {
         {/* Tagline */}
         <div className="mb-6 inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-5 py-2 border border-white/20">
           <Zap className="w-4 h-4 text-yellow-300" />
-          <span className="text-white font-medium">🚀 Future-Ready TVET Learning</span>
+          <span className="text-white font-medium">🚀 Training on IT Profesional Skills & Certification</span>
         </div>
 
         {/* Title */}
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-          <span className="text-white">Empowering Students</span>
+        <h1 className="text-2xl md:text-7xl font-bold mb-6 leading-tight">
+          <span className="text-white">High Quality Training </span>
           <br />
           <span className="bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 bg-clip-text text-transparent">
-            With Digital Skills
+            That bridges the Gap Between Current Skill-sets  & Industry based
           </span>
         </h1>
 

@@ -37,18 +37,19 @@ const Header = () => {
   ];
 
   const programLinks = [
-    {
-      name: "Internships",
-      desc: "Explore our internship programs and get hands-on experience.",
-      href: "/internships",
-    },
-    {
-      name: "Professional Courses",
+     {
+      name: "Training on IT Profesional Skills & Certification",
       desc: "Upgrade your skills with certified professional courses.",
       href: "/courses",
     },
     {
-      name: "Career Development",
+      name: "Training & Internship for TVET Students and University Students",
+      desc: "Explore our internship programs and get hands-on experience.",
+      href: "/internships",
+    },
+   
+    {
+      name: "STEM & Career Mentorship Programs",
       desc: "Access resources to build and grow your professional path.",
       href: "/career-development",
     },
