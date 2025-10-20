@@ -13,6 +13,8 @@ import ModernInternshipPlatform from "./pages//Internership";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import OnlineLearning from "./components/online/online";
+import ModuleLearing from "./components/online/onlineModule";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +33,8 @@ const App = () => (
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/course/:id" element={<CourseDetailsPage />} />
+          <Route path="/online-learning" element={<OnlineLearning/>}/>
+         <Route path="/course/:courseId" element={<ModuleLearing />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
